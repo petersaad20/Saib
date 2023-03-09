@@ -79,21 +79,21 @@ public class login {
 
     @Test(priority = '2')
     public void empty() {
-        WebElement UserName = driver.findElement(By.xpath("//*[@text='Username']"));
-        WebElement password = driver.findElement(By.xpath("//*[@text='Password']"));
+       /* WebElement UserName = driver.findElement(By.xpath("//*[@text='Username']"));
+        WebElement password = driver.findElement(By.xpath("//*[@text='Password']"));*/
         WebElement loginButton = driver.findElement(new AppiumBy.ByAccessibilityId("LET'S START!"));
-        WebElement dummyclick = driver.findElement(By.xpath("//android.view.View[@content-desc=\"Welcome to SAIB Employee\"]"));
+       // WebElement dummyclick = driver.findElement(By.xpath("//android.view.View[@content-desc=\"Welcome to SAIB Employee\"]"));
 
         // expected Results
         String expectedUserError = "Please enter your username.";
         String expectedPasswordError = "Please enter your password";
         //login and assertion
-        UserName.click();
+      /*  UserName.click();
         UserName.sendKeys("");
         dummyclick.click();
         password.click();
         password.sendKeys("");
-        dummyclick.click();
+        dummyclick.click();*/
         loginButton.click();
         WebElement userNameErr = driver.findElement(By.xpath("//android.view.View[@content-desc='Please enter your username.']"));
         String actualuserError = userNameErr.getTagName();
